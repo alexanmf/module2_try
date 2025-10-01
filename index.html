@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Simple Web Demo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1>Simple Web Demo</h1>
+    <button id="themeToggle" aria-pressed="false" class="btn">🌗 Toggle Dark Mode</button>
+  </header>
+
+  <main>
+    <section class="intro card">
+      <h2>Welcome </h2>
+      <p>This page shows a basic HTML/CSS/JavaScript project with a tiny interactive form and a dark-mode toggle.</p>
+    </section>
+
+    <section class="form-section card">
+      <h2>Feedback Form</h2>
+      <form id="feedbackForm" novalidate>
+        <div class="field">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" required />
+          <small class="error" id="nameError"></small>
+        </div>
+
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required />
+          <small class="error" id="emailError"></small>
+        </div>
+
+        <div class="field">
+          <label for="message">Message <span id="charCount" class="muted">(0/200)</span></label>
+          <textarea id="message" name="message" rows="4" maxlength="200" required></textarea>
+          <small class="error" id="messageError"></small>
+        </div>
+
+        <button id="submitBtn" class="btn primary" type="submit" disabled>Submit</button>
+      </form>
+    </section>
+
+    <section class="submissions card">
+      <h2>Saved Submissions</h2>
+      <ul id="submissionList" class="list"></ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Built with ♥ using plain HTML, CSS, and JS.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
